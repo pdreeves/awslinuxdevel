@@ -10,7 +10,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 # Intall pip, awscli, and ansible
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
   python get-pip.py && \
-  pip install awscli ansible --upgrade
+  pip3 install awscli ansible boto3 --upgrade
 
 # Volume for persistant storage or bind mounts
 VOLUME /opt/external
