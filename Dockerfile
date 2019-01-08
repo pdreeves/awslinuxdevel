@@ -1,7 +1,7 @@
 FROM amazonlinux
 
 # Install EPEL, python3, screen and Let's Encrypt Cert Bot
-RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
+RUN amazon-linux-extras install epel  && \
   yum update -y && \
   yum install python3 screen certbot jq -y && \
   yum clean all && \
