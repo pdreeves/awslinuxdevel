@@ -7,5 +7,9 @@ RUN amazon-linux-extras install epel  && \
   yum clean all && \
   rm -rf /var/cache/yum
 
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+  python get-pip.py && \
+  pip3 install boto3 --upgrade
+
 # Volume for persistant storage or bind mounts
 VOLUME /opt/external
