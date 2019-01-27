@@ -3,7 +3,7 @@ FROM amazonlinux
 # Install EPEL, python3, screen and Let's Encrypt Cert Bot
 RUN amazon-linux-extras install epel  && \
   yum update -y && \
-  yum install python3 screen certbot jq openssh-clients -y && \
+  yum install python3 screen certbot jq openssh-clients sshpass -y && \
   yum clean all && \
   rm -rf /var/cache/yum
 
