@@ -10,7 +10,9 @@ RUN amazon-linux-extras install epel  && \
 # Intall pip, awscli, and ansible
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
   python get-pip.py && \
-  pip3 install awscli ansible boto3 --upgrade
+  pip3 install awscli ansible boto3 --upgrade && \
+  mkdir .ssh && \
+  echo "ServerAliveInterval 60" >> .ssh/config
 
 # Volume for persistant storage or bind mounts
 VOLUME /opt/external
