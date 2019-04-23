@@ -11,7 +11,7 @@ RUN amazon-linux-extras install epel  && \
   yum clean all && \
   rm -rf /var/cache/yum && \
   mkdir /root/.ssh && \
-  echo "ServerAliveInterval 240" >> .ssh/config
+  echo "ServerAliveInterval 60" >> /.ssh/config
 
 # Intall pip, awscli, and ansible
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
