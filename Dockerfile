@@ -21,8 +21,12 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 WORKDIR /root
 RUN curl -o op_linux_amd64_v0.5.5.zip https://cache.agilebits.com/dist/1P/op/pkg/v0.5.5/op_linux_amd64_v0.5.5.zip && \
 	unzip op_linux_amd64_v0.5.5.zip && \
-	mv op /usr/local/bin
+	mv op /usr/local/bin && \
+	rm op*
 
 
-# Volume for persistant storage or bind mounts
-VOLUME /opt/external
+# Volume for external code
+VOLUME /opt/code
+
+# Volume for ssh configs
+VOLUME /root/.ssh
