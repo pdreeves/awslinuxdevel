@@ -1,11 +1,16 @@
 FROM amazonlinux
 
+LABEL version="2.0"
+LABEL maintainer="github.com/pdreeves"
+LABEL description="A container I use for development work."
+
 # Install and configure base applications 
 RUN amazon-linux-extras install epel  && \
   yum update -y && \
   yum install python3 screen certbot jq openssh-clients sshpass telnet nc unzip -y && \
   yum clean all && \
-  rm -rf /var/cache/yum
+  rm -rf /var/cache/yum && \
+  mkdir /root/.ssh
 
 # Intall pip, awscli, and ansible
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
