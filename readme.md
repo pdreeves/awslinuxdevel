@@ -1,11 +1,11 @@
 # Container Commands
 
 ## Create .ssh container
-docker volume create devlocalSSH
+docker volume create devVolume
 
 ## Start Container
-docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devlocalSSH:/root/.ssh pdreeves/devlocal
-docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devlocalSSH:/root/.ssh devlocal
+docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devVolume:/root/.ssh pdreeves/devlocal
+docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devVolume:/root/.ssh devlocal
 
 ## Build image
 docker image build . --file Dockerfile --tag devlocal
