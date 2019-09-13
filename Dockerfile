@@ -19,7 +19,8 @@ RUN amazon-linux-extras install epel  && \
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
   python get-pip.py && \
-  pip3 install awscli ansible boto3 --upgrade
+  pip3 install awscli ansible boto3 --upgrade && \
+  pip intall botocore
 
 WORKDIR /root
 RUN curl -o op_linux_amd64_v0.5.5.zip https://cache.agilebits.com/dist/1P/op/pkg/v0.5.5/op_linux_amd64_v0.5.5.zip && \
