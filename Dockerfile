@@ -1,6 +1,6 @@
 FROM amazonlinux
 
-LABEL version="2.0"
+LABEL version="2.0.1"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for development work."
 
@@ -20,11 +20,11 @@ RUN amazon-linux-extras install epel  && \
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
   python get-pip.py && \
   pip3 install awscli ansible boto3 --upgrade && \
-  pip intall botocore
+  pip install botocore
 
 WORKDIR /root
-RUN curl -o op_linux_amd64_v0.5.5.zip https://cache.agilebits.com/dist/1P/op/pkg/v0.5.5/op_linux_amd64_v0.5.5.zip && \
-	unzip op_linux_amd64_v0.5.5.zip && \
+RUN curl -o op_linux_amd64_v0.8.0.zip https://cache.agilebits.com/dist/1P/op/pkg/v0.8.0/op_linux_amd64_v0.8.0.zip && \
+	unzip op_linux_amd64_v0.8.0.zip && \
 	mv op /usr/local/bin && \
 	rm op*
 
