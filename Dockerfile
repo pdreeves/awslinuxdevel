@@ -1,6 +1,6 @@
 FROM amazonlinux
 
-LABEL version="2.0.1"
+LABEL version="2.0.2"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for development work."
 
