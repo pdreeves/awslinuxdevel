@@ -1,6 +1,6 @@
 FROM amazonlinux
 
-LABEL version="2.2.1"
+LABEL version="2.2.2"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for development work."
 
@@ -19,7 +19,7 @@ RUN amazon-linux-extras install epel  && \
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
   python get-pip.py && \
-  pip3 install awscli ansible boto3 requests ldap3 pre-commit --upgrade && \
+  pip3 install awscli ansible boto3 requests ldap3 pre-commit splunk-sdk --upgrade && \
   pip install botocore
 
 WORKDIR /root
