@@ -1,6 +1,6 @@
 FROM amazonlinux
 
-LABEL version="2021.01.10"
+LABEL version="2021.02.21"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for development work."
 
@@ -18,7 +18,7 @@ RUN amazon-linux-extras install epel  && \
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-  python get-pip.py && \
+  python3 get-pip.py && \
   pip3 install awscli ansible boto3 requests ldap3 pre-commit splunk-sdk --upgrade && \
   pip install botocore
 
