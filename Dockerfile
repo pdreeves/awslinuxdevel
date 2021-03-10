@@ -9,7 +9,7 @@ LABEL description="A container I use for development work."
 # Install base applications 
 RUN amazon-linux-extras install epel  && \
   yum update -y && \
-  yum install wget curl python3 screen certbot jq openssh-clients sshpass telnet nc unzip zsh git -y && \
+  yum install iputils wget curl python3 screen certbot jq openssh-clients sshpass telnet nc unzip zsh git -y && \
   yum clean all && \
   rm -rf /var/cache/yum && \
   mkdir /root/.ssh && \
