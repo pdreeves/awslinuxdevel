@@ -1,6 +1,6 @@
 FROM amazonlinux
 
-LABEL version="2021.06.25"
+LABEL version="2021.07.14"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for development work."
 
@@ -9,7 +9,7 @@ LABEL description="A container I use for development work."
 # Install base applications 
 RUN amazon-linux-extras install epel  && \
   yum update -y && \
-  yum install iputils wget curl python3 screen certbot jq openssh-clients sshpass telnet nc unzip zsh git -y && \
+  yum install iputils wget curl python3 screen certbot jq openssh-clients sshpass telnet nc unzip zsh git bind-utils -y && \
   yum clean all && \
   rm -rf /var/cache/yum && \
   mkdir /root/.ssh && \
