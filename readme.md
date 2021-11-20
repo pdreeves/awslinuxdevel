@@ -10,6 +10,9 @@ docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devVolume:/root/.ssh de
 ## Build image
 docker image build . --file Dockerfile --tag devlocal
 
+## Build image with no cache
+docker image build --no-cache . --file Dockerfile --tag devlocal
+
 ## Tag and push image to DockerHub
 docker tag devlocal pdreeves/devlocal
 docker push pdreeves/devlocal
