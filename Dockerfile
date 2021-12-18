@@ -1,10 +1,10 @@
 FROM amazonlinux
 
-LABEL version="2021.11.20"
+LABEL version="2021.12.18"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for development work."
 
-# Adding to rebuilda
+# Adding to rebuild
 
 # Install base applications 
 RUN amazon-linux-extras install epel  && \
