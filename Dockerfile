@@ -1,8 +1,8 @@
 FROM amazonlinux
 
-LABEL version="2021.12.18"
+LABEL version="2022.02.17"
 LABEL maintainer="github.com/pdreeves"
-LABEL description="A container I use for development work."
+LABEL description="A container I use for command lne work."
 
 # Adding to rebuild
 
