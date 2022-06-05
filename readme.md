@@ -4,18 +4,17 @@
 docker volume create devVolume
 
 ## Start Container
-docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devVolume:/root/.ssh pdreeves/devlocal
-docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devVolume:/root/.ssh devlocal
+docker run --rm -it -v /Users/pdreeves/Code:/opt/code -v devVolume:/root/.ssh dev
 
 ## Build image
-docker image build . --file Dockerfile --tag devlocal
+docker image build . --file Dockerfile --tag dev
 
 ## Build image with no cache
-docker image build --no-cache . --file Dockerfile --tag devlocal
+docker image build --no-cache . --file Dockerfile --tag dev
 
 ## Tag and push image to DockerHub
-docker tag devlocal pdreeves/devlocal
-docker push pdreeves/devlocal
+docker tag dev pdreeves/dev
+docker push pdreeves/dev
 
 ## Delete image
-docker image rm devlocal
+docker image rm dev
