@@ -8,8 +8,9 @@ LABEL description="A container I use for command line work."
 RUN apt-get update && \
   apt-get upgrade -y && \
   DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata && \
-  apt-get install inetutils-traceroute wget curl python3 jq netcat zsh git dnsutils python3-pip awscli ansible python3-boto3 python3-requests sshpash -y && \
+  apt-get install inetutils-traceroute wget curl python3 jq netcat zsh git dnsutils python3-pip awscli ansible python3-boto3 python3-requests sshpass -y && \
   apt-get clean && \
+  mkdir /root/.ssh && \
   rm -rf /var/cache/apt/archives && \
   echo "ServerAliveInterval 60" >> /root/.ssh/config && \
   git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
