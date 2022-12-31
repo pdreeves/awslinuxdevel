@@ -1,6 +1,6 @@
 FROM ubuntu
 
-LABEL version="2022.06.05"
+LABEL version="2022.12.31"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for command line work."
 
@@ -8,7 +8,7 @@ LABEL description="A container I use for command line work."
 RUN apt-get update && \
   apt-get upgrade -y && \
   DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata && \
-  apt-get install inetutils-traceroute wget curl python3 jq netcat zsh git dnsutils python3-pip awscli ansible python3-boto3 python3-requests sshpass -y && \
+  apt-get install inetutils-traceroute wget curl python3 jq netcat zsh git dnsutils python3-pip awscli ansible python3-boto3 python3-requests sshpass telnet vim iputils-ping zstd -y && \
   apt-get clean && \
   mkdir /root/.ssh && \
   rm -rf /var/cache/apt/archives && \
