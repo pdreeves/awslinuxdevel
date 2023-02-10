@@ -1,6 +1,6 @@
 FROM ubuntu
 
-LABEL version="2022.12.31"
+LABEL version="2023.02.010"
 LABEL maintainer="github.com/pdreeves"
 LABEL description="A container I use for command line work."
 
